@@ -27,7 +27,7 @@ class SleepNightAdapter: RecyclerView.Adapter<TextItemViewHolder>(){
     override fun getItemCount() = data.size
 
     override fun onBindViewHolder(holder: TextItemViewHolder, position: Int) {
-        val item = data(position)
+        val item = data[position]
         holder.textView.text = item.sleepQuality.toString()
     }
 
