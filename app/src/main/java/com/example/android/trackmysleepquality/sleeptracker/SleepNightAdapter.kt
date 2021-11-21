@@ -23,5 +23,5 @@ import com.example.android.trackmysleepquality.database.SleepNight
 class SleepNightAdapter: RecyclerView.Adapter<TextItemViewHolder>(){
     var data = listOf<SleepNight>()
 
-
+    override fun getItemCount() = data.size
 }
