@@ -26,7 +26,7 @@ import com.example.android.trackmysleepquality.R
 import com.example.android.trackmysleepquality.TextItemViewHolder
 import com.example.android.trackmysleepquality.database.SleepNight
 
-class SleepNightAdapter: RecyclerView.Adapter<TextItemViewHolder>(){
+class SleepNightAdapter: RecyclerView.Adapter<SleepNightAdapter.ViewHolder>(){
     var data = listOf<SleepNight>()
         set(value) {
             field = value
