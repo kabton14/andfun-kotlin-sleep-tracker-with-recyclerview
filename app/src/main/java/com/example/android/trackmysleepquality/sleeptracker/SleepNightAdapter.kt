@@ -60,7 +60,7 @@ class SleepNightAdapter: RecyclerView.Adapter<SleepNightAdapter.ViewHolder>(){
         })
     }
 
-    class viewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val sleepQuality: TextView = itemView.findViewById(R.id.sleep_length)
         val quality: TextView = itemView.findViewById(R.id.quality_string)
     }
