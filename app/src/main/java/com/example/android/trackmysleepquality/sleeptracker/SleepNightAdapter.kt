@@ -56,7 +56,9 @@ class SleepNightAdapter(val clickListener:SleepNightListener): ListAdapter<Sleep
                 }
             )
 
+            binding.sleep = item
             binding.clickListener = clickListener
+            binding.executePendingBindings()
         }
 
         companion object {
