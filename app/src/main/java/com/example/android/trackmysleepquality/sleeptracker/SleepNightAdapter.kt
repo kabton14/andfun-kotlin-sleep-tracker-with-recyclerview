@@ -86,3 +86,14 @@ class SleepNightListener(val clickListener: (sleepId: Long) -> Unit){
 }
 
 
+sealed class DataItem {
+    data class SleepNightItem(val sleepNight: SleepNight): DataItem(){
+        override val id = sleepNight.nightId
+    }
+    object Header: DataItem(){
+        override val id = Long.MIN_VALUE
+    }
+
+    abstract val id: Long
+
+}
