@@ -48,6 +48,13 @@ class SleepNightAdapter(val clickListener:SleepNightListener): ListAdapter<DataI
         }
     }
 
+    override fun getItemViewType(position: Int): Int {
+        return when (getItem(position)) {
+            is DataItem.Header -> ITEM_VIEW_TYPE_HEADER
+            is DataItem.SleepNightItem -> ITEM_VIEW_TYPE_ITEM
+        }
+    }
+
     fun addHeaderAndSubmitList(list: List<SleepNight>?){
         adapterScope.launch {
             val items = when (list) {
